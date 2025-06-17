@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		FA86E4DA2E01EF3100E4BBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86E4BB2E01EF2E00E4BBBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA86E4C22E01EF2E00E4BBBC;
+			remoteInfo = WorldLens;
+		};
+		FA86E4E42E01EF3100E4BBBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA86E4BB2E01EF2E00E4BBBC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA86E4C22E01EF2E00E4BBBC;
+			remoteInfo = WorldLens;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA86E4C32E01EF2E00E4BBBC /* WorldLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA86E4D92E01EF3100E4BBBC /* WorldLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA86E4E32E01EF3100E4BBBC /* WorldLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FA86E4EB2E01EF3100E4BBBC /* Exceptions for "WorldLens" folder in "WorldLens" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FA86E4C22E01EF2E00E4BBBC /* WorldLens */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FA86E4C52E01EF2E00E4BBBC /* WorldLens */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FA86E4EB2E01EF3100E4BBBC /* Exceptions for "WorldLens" folder in "WorldLens" target */,
+			);
+			path = WorldLens;
+			sourceTree = "<group>";
+		};
+		FA86E4DC2E01EF3100E4BBBC /* WorldLensTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WorldLensTests;
+			sourceTree = "<group>";
+		};
+		FA86E4E62E01EF3100E4BBBC /* WorldLensUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WorldLensUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA86E4C02E01EF2E00E4BBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4D62E01EF3100E4BBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4E02E01EF3100E4BBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA86E4BA2E01EF2E00E4BBBC = {
+			isa = PBXGroup;
+			children = (
+				FA86E4C52E01EF2E00E4BBBC /* WorldLens */,
+				FA86E4DC2E01EF3100E4BBBC /* WorldLensTests */,
+				FA86E4E62E01EF3100E4BBBC /* WorldLensUITests */,
+				FA86E4C42E01EF2E00E4BBBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA86E4C42E01EF2E00E4BBBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA86E4C32E01EF2E00E4BBBC /* WorldLens.app */,
+				FA86E4D92E01EF3100E4BBBC /* WorldLensTests.xctest */,
+				FA86E4E32E01EF3100E4BBBC /* WorldLensUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA86E4C22E01EF2E00E4BBBC /* WorldLens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA86E4EC2E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLens" */;
+			buildPhases = (
+				FA86E4BF2E01EF2E00E4BBBC /* Sources */,
+				FA86E4C02E01EF2E00E4BBBC /* Frameworks */,
+				FA86E4C12E01EF2E00E4BBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FA86E4C52E01EF2E00E4BBBC /* WorldLens */,
+			);
+			name = WorldLens;
+			packageProductDependencies = (
+			);
+			productName = WorldLens;
+			productReference = FA86E4C32E01EF2E00E4BBBC /* WorldLens.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA86E4D82E01EF3100E4BBBC /* WorldLensTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA86E4F12E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLensTests" */;
+			buildPhases = (
+				FA86E4D52E01EF3100E4BBBC /* Sources */,
+				FA86E4D62E01EF3100E4BBBC /* Frameworks */,
+				FA86E4D72E01EF3100E4BBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA86E4DB2E01EF3100E4BBBC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA86E4DC2E01EF3100E4BBBC /* WorldLensTests */,
+			);
+			name = WorldLensTests;
+			packageProductDependencies = (
+			);
+			productName = WorldLensTests;
+			productReference = FA86E4D92E01EF3100E4BBBC /* WorldLensTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA86E4E22E01EF3100E4BBBC /* WorldLensUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA86E4F42E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLensUITests" */;
+			buildPhases = (
+				FA86E4DF2E01EF3100E4BBBC /* Sources */,
+				FA86E4E02E01EF3100E4BBBC /* Frameworks */,
+				FA86E4E12E01EF3100E4BBBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA86E4E52E01EF3100E4BBBC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA86E4E62E01EF3100E4BBBC /* WorldLensUITests */,
+			);
+			name = WorldLensUITests;
+			packageProductDependencies = (
+			);
+			productName = WorldLensUITests;
+			productReference = FA86E4E32E01EF3100E4BBBC /* WorldLensUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA86E4BB2E01EF2E00E4BBBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					FA86E4C22E01EF2E00E4BBBC = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					FA86E4D82E01EF3100E4BBBC = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FA86E4C22E01EF2E00E4BBBC;
+					};
+					FA86E4E22E01EF3100E4BBBC = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FA86E4C22E01EF2E00E4BBBC;
+					};
+				};
+			};
+			buildConfigurationList = FA86E4BE2E01EF2E00E4BBBC /* Build configuration list for PBXProject "WorldLens" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA86E4BA2E01EF2E00E4BBBC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FA86E4C42E01EF2E00E4BBBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA86E4C22E01EF2E00E4BBBC /* WorldLens */,
+				FA86E4D82E01EF3100E4BBBC /* WorldLensTests */,
+				FA86E4E22E01EF3100E4BBBC /* WorldLensUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA86E4C12E01EF2E00E4BBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4D72E01EF3100E4BBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4E12E01EF3100E4BBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA86E4BF2E01EF2E00E4BBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4D52E01EF3100E4BBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA86E4DF2E01EF3100E4BBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA86E4DB2E01EF3100E4BBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA86E4C22E01EF2E00E4BBBC /* WorldLens */;
+			targetProxy = FA86E4DA2E01EF3100E4BBBC /* PBXContainerItemProxy */;
+		};
+		FA86E4E52E01EF3100E4BBBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA86E4C22E01EF2E00E4BBBC /* WorldLens */;
+			targetProxy = FA86E4E42E01EF3100E4BBBC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FA86E4ED2E01EF3100E4BBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldLens/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA86E4EE2E01EF3100E4BBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorldLens/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA86E4EF2E01EF3100E4BBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA86E4F02E01EF3100E4BBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA86E4F22E01EF3100E4BBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLensTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldLens";
+			};
+			name = Debug;
+		};
+		FA86E4F32E01EF3100E4BBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLensTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldLens.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldLens";
+			};
+			name = Release;
+		};
+		FA86E4F52E01EF3100E4BBBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorldLens;
+			};
+			name = Debug;
+		};
+		FA86E4F62E01EF3100E4BBBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A5Y9WBD7WV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.banu.WorldLensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorldLens;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA86E4BE2E01EF2E00E4BBBC /* Build configuration list for PBXProject "WorldLens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA86E4EF2E01EF3100E4BBBC /* Debug */,
+				FA86E4F02E01EF3100E4BBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA86E4EC2E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA86E4ED2E01EF3100E4BBBC /* Debug */,
+				FA86E4EE2E01EF3100E4BBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA86E4F12E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLensTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA86E4F22E01EF3100E4BBBC /* Debug */,
+				FA86E4F32E01EF3100E4BBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA86E4F42E01EF3100E4BBBC /* Build configuration list for PBXNativeTarget "WorldLensUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA86E4F52E01EF3100E4BBBC /* Debug */,
+				FA86E4F62E01EF3100E4BBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA86E4BB2E01EF2E00E4BBBC /* Project object */;
+}
