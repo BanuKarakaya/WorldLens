@@ -21,7 +21,9 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(index: indexPath.item)
+    }
 }
 
 extension SearchViewController: UICollectionViewDataSource {
@@ -67,6 +69,14 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SearchViewController: SearchViewModelDelegate {
+    func navigateToDetailVC(selectedCell: Article?) {
+        let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewDetailPageViewController") as! NewDetailPageViewController
+        navigationController?.pushViewController(detailVC, animated: true)
+        let detailViewModel = NewsDetailPageViewModel(delegate: detailVC)
+        detailVC.viewModel = detailViewModel
+        detailViewModel.selectedNew = selectedCell
+    }
+    
     func prepareUI() {
         searchCollectionView.showsVerticalScrollIndicator = false
         categoriesCollectionView.showsHorizontalScrollIndicator = false

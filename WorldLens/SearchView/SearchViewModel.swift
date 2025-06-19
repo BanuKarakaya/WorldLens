@@ -13,12 +13,14 @@ protocol SearchViewModelProtocol {
     func newAtIndex(index: Int) -> Article?
     func categoryAtIndex(index: Int) -> String?
     func viewDidLoad()
+    func didSelectItemAt(index: Int)
 }
 
 protocol SearchViewModelDelegate: AnyObject {
     func reloadData()
     func prepareCollectionView()
     func prepareUI()
+    func navigateToDetailVC(selectedCell: Article?)
 }
 
 final class SearchViewModel {
@@ -51,6 +53,13 @@ final class SearchViewModel {
 }
 
 extension SearchViewModel: SearchViewModelProtocol {
+    func didSelectItemAt(index: Int) {
+        var selectedCell: Article?
+        
+        selectedCell = breakingNews?[index]
+        delegate?.navigateToDetailVC(selectedCell: selectedCell)
+    }
+    
     func categoryAtIndex(index: Int) -> String? {
         let category = categories[index]
         return category

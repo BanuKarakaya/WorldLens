@@ -20,7 +20,9 @@ class HomeViewController: UIViewController{
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(index: indexPath.item)
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -39,6 +41,14 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func navigateToDetailVC(selectedCell: Article?) {
+        let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewDetailPageViewController") as! NewDetailPageViewController
+        navigationController?.pushViewController(detailVC, animated: true)
+        let detailViewModel = NewsDetailPageViewModel(delegate: detailVC)
+        detailVC.viewModel = detailViewModel
+        detailViewModel.selectedNew = selectedCell
+    }
+    
     func prepareUI() {
         self.title = "News"
     }

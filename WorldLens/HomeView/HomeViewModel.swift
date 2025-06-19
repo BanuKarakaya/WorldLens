@@ -11,12 +11,14 @@ protocol HomeViewModelProtocol {
     func viewDidLoad()
     func newAtIndex(index: Int) -> Article?
     func numberOfItems() -> Int
+    func didSelectItemAt(index: Int)
 }
 
 protocol HomeViewModelDelegate: AnyObject {
     func prepareCollectionView()
     func reloadData()
     func prepareUI()
+    func navigateToDetailVC(selectedCell: Article?)
 }
 
 final class HomeViewModel {
@@ -48,6 +50,13 @@ final class HomeViewModel {
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
+    func didSelectItemAt(index: Int) {
+        var selectedCell: Article?
+        
+        selectedCell = articles?[index]
+        delegate?.navigateToDetailVC(selectedCell: selectedCell)
+    }
+    
     func numberOfItems() -> Int {
         return articles?.count ?? 0
     }
