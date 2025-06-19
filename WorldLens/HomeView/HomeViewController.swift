@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-   
+class HomeViewController: UIViewController{
+    
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
     private lazy var viewModel: HomeViewModelProtocol = HomeViewModel(delegate: self)
@@ -25,16 +25,24 @@ extension HomeViewController: UICollectionViewDelegate {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        viewModel.numberOfItems()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeCell(cellType: NewsCell.self, indexPath: indexPath)
+        let new = viewModel.newAtIndex(index: indexPath.item)
+        let cellViewModel = NewsCellViewModel(delegate: cell, new: new)
+        cell.viewModel = cellViewModel
+        
         return cell
     }
 }
 
 extension HomeViewController: HomeViewModelDelegate {
+    func prepareUI() {
+        self.title = "News"
+    }
+    
     func prepareCollectionView() {
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self

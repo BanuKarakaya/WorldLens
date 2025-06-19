@@ -92,11 +92,11 @@
             </objects>
             <point key="canvasLocation" x="424" y="-326"/>
         </scene>
-        <!--Search-->
+        <!--Categories-->
         <scene sceneID="OL4-14-38m">
             <objects>
                 <navigationController id="oz5-oB-dZL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="9US-l8-N8p"/>
+                    <tabBarItem key="tabBarItem" title="Categories" image="location" catalog="system" id="9US-l8-N8p"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h1L-AA-rSv">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,25 +112,97 @@
         <!--Search View Controller-->
         <scene sceneID="zjD-1i-vuT">
             <objects>
-                <viewController id="KHM-Mm-bGb" userLabel="Search View Controller" sceneMemberID="viewController">
+                <viewController id="KHM-Mm-bGb" userLabel="Search View Controller" customClass="SearchViewController" customModule="WorldLens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oI2-Y4-c3E">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-0T-W4B">
+                                <rect key="frame" x="0.0" y="227" width="393" height="508"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L7G-9O-Hy7">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oeB-1l-f9P">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ATd-6o-u0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYz-4k-U81">
+                                <rect key="frame" x="0.0" y="162" width="393" height="65"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EjK-TG-AgU">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wct-bt-SKh">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fH4-yh-FQZ">
+                                                <rect key="frame" x="0.0" y="-31.666666666666668" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="16I-2Z-Ump">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EjK-TG-AgU" secondAttribute="trailing" id="2xZ-0k-uT8"/>
+                                    <constraint firstAttribute="bottom" secondItem="EjK-TG-AgU" secondAttribute="bottom" id="7BI-Jh-JaQ"/>
+                                    <constraint firstItem="EjK-TG-AgU" firstAttribute="top" secondItem="OYz-4k-U81" secondAttribute="top" id="Cyr-8K-egm"/>
+                                    <constraint firstAttribute="height" constant="65" id="Q8C-RY-GOi"/>
+                                    <constraint firstItem="EjK-TG-AgU" firstAttribute="leading" secondItem="OYz-4k-U81" secondAttribute="leading" id="gLj-wR-0Vy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="F3m-OI-Z7Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aai-0T-W4B" firstAttribute="top" secondItem="OYz-4k-U81" secondAttribute="bottom" id="1do-O0-uIK"/>
+                            <constraint firstItem="Aai-0T-W4B" firstAttribute="leading" secondItem="F3m-OI-Z7Y" secondAttribute="leading" id="8HT-XX-z9f"/>
+                            <constraint firstItem="OYz-4k-U81" firstAttribute="trailing" secondItem="F3m-OI-Z7Y" secondAttribute="trailing" id="I93-DQ-bLU"/>
+                            <constraint firstItem="OYz-4k-U81" firstAttribute="leading" secondItem="F3m-OI-Z7Y" secondAttribute="leading" id="Lm0-cN-gMF"/>
+                            <constraint firstItem="Aai-0T-W4B" firstAttribute="top" secondItem="OYz-4k-U81" secondAttribute="bottom" id="MVH-lL-DCe"/>
+                            <constraint firstItem="Aai-0T-W4B" firstAttribute="trailing" secondItem="F3m-OI-Z7Y" secondAttribute="trailing" id="TBe-hJ-N06"/>
+                            <constraint firstItem="OYz-4k-U81" firstAttribute="top" secondItem="F3m-OI-Z7Y" secondAttribute="top" id="X7T-vB-jAv"/>
+                            <constraint firstItem="Aai-0T-W4B" firstAttribute="bottom" secondItem="F3m-OI-Z7Y" secondAttribute="bottom" id="hbD-QN-xcr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1O8-HX-VjQ"/>
+                    <connections>
+                        <outlet property="categoriesCollectionView" destination="EjK-TG-AgU" id="Cud-AR-6i1"/>
+                        <outlet property="searchCollectionView" destination="Aai-0T-W4B" id="Ju6-bd-ZUj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJf-m0-D2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="344"/>
+            <point key="canvasLocation" x="423.66412213740455" y="343.66197183098592"/>
         </scene>
     </scenes>
     <resources>
         <image name="homekit" catalog="system" width="128" height="104"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="location" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
