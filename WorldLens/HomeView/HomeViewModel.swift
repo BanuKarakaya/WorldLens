@@ -6,3 +6,26 @@
 //
 
 import Foundation
+
+protocol HomeViewModelProtocol {
+    func viewDidLoad()
+}
+
+protocol HomeViewModelDelegate: AnyObject {
+    func prepareCollectionView()
+    func reloadData()
+}
+
+final class HomeViewModel {
+    weak var delegate: HomeViewModelDelegate?
+    
+    init(delegate: HomeViewModelDelegate?) {
+        self.delegate = delegate
+    }
+}
+
+extension HomeViewModel: HomeViewModelProtocol {
+    func viewDidLoad() {
+        delegate?.prepareCollectionView()
+    }
+}
