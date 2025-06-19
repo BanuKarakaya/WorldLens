@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NewsCell: UICollectionViewCell {
 
@@ -24,9 +25,18 @@ class NewsCell: UICollectionViewCell {
 }
 
 extension NewsCell: NewsCellViewModelDelegate {
-    func configureCell(new: Article) {
-        newsTitle.text = new.title
-        newsContent.text = new.description
+    func prepareBannerImage(with urlString: String?) {
+        if let imageUrlString = urlString, let url = URL(string:imageUrlString){
+            newsPhoto.sd_setImage(with: url)
+        }
+    }
+    
+    func configureCell(new: Article?) {
+        newsTitle.text = new?.title
+        newsContent.text = new?.description
+        newsDate.text = new?.publishedAt
+        newsSource.text = new?.source.id
+        prepareBannerImage(with: new?.urlToImage)
     }
     
     func prepareUI() {

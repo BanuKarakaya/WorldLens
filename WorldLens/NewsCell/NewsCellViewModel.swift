@@ -14,7 +14,8 @@ protocol NewsCellViewModelProtocol {
 
 protocol NewsCellViewModelDelegate: AnyObject {
     func prepareUI()
-    func configureCell(new: Article)
+    func configureCell(new: Article?)
+    func prepareBannerImage(with urlString: String?)
 }
 
 final class NewsCellViewModel {

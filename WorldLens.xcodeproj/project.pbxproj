@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FA1CB00C2E04567900379C7D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FA1CB00B2E04567900379C7D /* SDWebImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FA86E4DA2E01EF3100E4BBBC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CB00C2E04567900379C7D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = WorldLens;
 			packageProductDependencies = (
+				FA1CB00B2E04567900379C7D /* SDWebImage */,
 			);
 			productName = WorldLens;
 			productReference = FA86E4C32E01EF2E00E4BBBC /* WorldLens.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = FA86E4BA2E01EF2E00E4BBBC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FA1CB00A2E0455D600379C7D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FA86E4C42E01EF2E00E4BBBC /* Products */;
 			projectDirPath = "";
@@ -571,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA1CB00A2E0455D600379C7D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA1CB00B2E04567900379C7D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA1CB00A2E0455D600379C7D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA86E4BB2E01EF2E00E4BBBC /* Project object */;
 }
