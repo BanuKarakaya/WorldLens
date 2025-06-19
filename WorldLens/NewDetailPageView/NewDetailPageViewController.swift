@@ -12,6 +12,7 @@ class NewDetailPageViewController: UIViewController {
     @IBOutlet weak var newPhoto: UIImageView!
     @IBOutlet weak var newTitle: UILabel!
     @IBOutlet weak var newContent: UILabel!
+    @IBOutlet weak var forMore: UITextView!
     
     lazy var viewModel:  NewsDetailPageViewModelProtocol = NewsDetailPageViewModel(delegate: self)
     
@@ -24,6 +25,9 @@ class NewDetailPageViewController: UIViewController {
 extension NewDetailPageViewController: NewsDetailPageViewModelDelegate {
     func prepareUI() {
         newPhoto.layer.cornerRadius = 12
+        forMore.dataDetectorTypes = .link
+        forMore.isEditable = false
+        forMore.isScrollEnabled = false
     }
     
     func prepareBannerImage(with urlString: String?) {
@@ -36,5 +40,6 @@ extension NewDetailPageViewController: NewsDetailPageViewModelDelegate {
         prepareBannerImage(with: selectedNew.urlToImage)
         newTitle.text = selectedNew.title
         newContent.text = selectedNew.content
+        forMore.text = "For more: \(selectedNew.url ?? "")"
     }
 }

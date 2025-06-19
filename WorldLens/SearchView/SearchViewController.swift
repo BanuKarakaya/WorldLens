@@ -22,7 +22,11 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectItemAt(index: indexPath.item)
+        if collectionView == searchCollectionView {
+            viewModel.didSelectItemAt(index: indexPath.item)
+        } else if collectionView == categoriesCollectionView {
+            print("banu")
+        }
     }
 }
 
@@ -68,7 +72,28 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.searchBarSearchButtonClicked(searchText: searchBar.text)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.searchBarCancelButtonClicked()
+    }
+}
+
 extension SearchViewController: SearchViewModelDelegate {
+    func prepareSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .tintColor
+        
+        searchController.searchBar.delegate = self
+    }
+    
     func navigateToDetailVC(selectedCell: Article?) {
         let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewDetailPageViewController") as! NewDetailPageViewController
         navigationController?.pushViewController(detailVC, animated: true)

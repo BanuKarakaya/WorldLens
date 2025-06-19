@@ -18,6 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.23137254900000001" green="0.59999999999999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="l9b-jt-SZQ" kind="relationship" relationship="viewControllers" id="0JR-27-dqU"/>
@@ -143,6 +144,10 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EjK-TG-AgU">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Gh9-HY-ixV"/>
+                                            <constraint firstAttribute="width" constant="393" id="iNt-4W-4U8"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wct-bt-SKh">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -206,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vi6-OL-81g" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="433"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-Ph-Swp">
                                                 <rect key="frame" x="13" y="13" width="367" height="261"/>
@@ -226,19 +231,33 @@
                                                 <color key="textColor" red="0.23921568630000001" green="0.15686274510000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Txk-eG-55Z">
+                                                <rect key="frame" x="24" y="357" width="345" height="76"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="76" id="r6Q-eP-mao"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" red="0.2156862745" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="ddT-3k-PnX" firstAttribute="top" secondItem="LP9-u1-VK0" secondAttribute="bottom" constant="11.33" id="2yc-Ak-zLP"/>
                                             <constraint firstItem="LP9-u1-VK0" firstAttribute="leading" secondItem="Vi6-OL-81g" secondAttribute="leading" constant="24" id="5Xn-6r-lNS"/>
                                             <constraint firstItem="eZG-Ph-Swp" firstAttribute="top" secondItem="Vi6-OL-81g" secondAttribute="top" constant="13" id="CNb-1W-rPI"/>
-                                            <constraint firstAttribute="bottom" secondItem="ddT-3k-PnX" secondAttribute="bottom" id="DGa-DT-53Q"/>
                                             <constraint firstAttribute="trailing" secondItem="LP9-u1-VK0" secondAttribute="trailing" constant="24" id="EQ6-xO-I5o"/>
+                                            <constraint firstAttribute="trailing" secondItem="Txk-eG-55Z" secondAttribute="trailing" constant="24" id="H8F-ar-sYX"/>
+                                            <constraint firstItem="Txk-eG-55Z" firstAttribute="top" secondItem="ddT-3k-PnX" secondAttribute="bottom" constant="20" id="JEL-12-vsf"/>
                                             <constraint firstItem="ddT-3k-PnX" firstAttribute="leading" secondItem="Vi6-OL-81g" secondAttribute="leading" constant="24" id="PwH-nQ-FTV"/>
                                             <constraint firstItem="LP9-u1-VK0" firstAttribute="leading" secondItem="Vi6-OL-81g" secondAttribute="leading" constant="24" id="Uea-me-0LO"/>
+                                            <constraint firstItem="Txk-eG-55Z" firstAttribute="leading" secondItem="Vi6-OL-81g" secondAttribute="leading" constant="24" id="Wq5-9E-6gR"/>
                                             <constraint firstItem="eZG-Ph-Swp" firstAttribute="leading" secondItem="Vi6-OL-81g" secondAttribute="leading" constant="13" id="bto-G2-V8d"/>
                                             <constraint firstItem="LP9-u1-VK0" firstAttribute="top" secondItem="eZG-Ph-Swp" secondAttribute="bottom" constant="13" id="e4t-fW-E8t"/>
                                             <constraint firstAttribute="trailing" secondItem="eZG-Ph-Swp" secondAttribute="trailing" constant="13" id="jxK-xi-47A"/>
+                                            <constraint firstAttribute="bottom" secondItem="Txk-eG-55Z" secondAttribute="bottom" id="pby-jk-VmY"/>
                                             <constraint firstAttribute="trailing" secondItem="ddT-3k-PnX" secondAttribute="trailing" constant="24" id="vfx-tb-wqp"/>
                                         </constraints>
                                     </view>
@@ -265,6 +284,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forMore" destination="Txk-eG-55Z" id="YOX-nW-D1E"/>
                         <outlet property="newContent" destination="ddT-3k-PnX" id="S21-6O-ZUp"/>
                         <outlet property="newPhoto" destination="eZG-Ph-Swp" id="4k6-TX-SWf"/>
                         <outlet property="newTitle" destination="LP9-u1-VK0" id="7q8-HH-0R4"/>

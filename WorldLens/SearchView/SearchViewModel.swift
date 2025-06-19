@@ -14,6 +14,8 @@ protocol SearchViewModelProtocol {
     func categoryAtIndex(index: Int) -> String?
     func viewDidLoad()
     func didSelectItemAt(index: Int)
+    func searchBarCancelButtonClicked()
+    func searchBarSearchButtonClicked(searchText: String?)
 }
 
 protocol SearchViewModelDelegate: AnyObject {
@@ -21,11 +23,14 @@ protocol SearchViewModelDelegate: AnyObject {
     func prepareCollectionView()
     func prepareUI()
     func navigateToDetailVC(selectedCell: Article?)
+    func prepareSearchController()
 }
 
 final class SearchViewModel {
     private weak var delegate: SearchViewModelDelegate?
     var breakingNews: [Article]?
+    var searchNews: [Article]?
+    var isSearching = false
     var categories = ["Breaking News", "Entertainment", "Health", "Science", "Sports"]
     private let networkManager: NetworkManagerInterface
     
@@ -50,9 +55,39 @@ final class SearchViewModel {
             }
         }
     }
+    
+    func fetchSearchArticles(searchedText: String) {
+        networkManager.getSearchArticles(completion: { responseData in
+            switch responseData {
+            case .success(let responseData):
+                self.searchNews = responseData.articles
+                DispatchQueue.main.async {
+                    self.delegate?.reloadData()
+                }
+                print(responseData)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }, searchText: searchedText)
+    }
 }
 
 extension SearchViewModel: SearchViewModelProtocol {
+    func searchBarSearchButtonClicked(searchText: String?) {
+        if let searchText = searchText {
+            isSearching = true
+            fetchSearchArticles(searchedText: searchText)
+            delegate?.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked() {
+        isSearching = false
+        delegate?.reloadData()
+    }
+    
     func didSelectItemAt(index: Int) {
         var selectedCell: Article?
         
@@ -72,17 +107,24 @@ extension SearchViewModel: SearchViewModelProtocol {
     func viewDidLoad() {
         delegate?.prepareCollectionView()
         delegate?.prepareUI()
+        delegate?.prepareSearchController()
         fetchBreakingNews()
     }
     
     func newAtIndex(index: Int) -> Article? {
-        if let new = breakingNews?[index] {
-            return new
+        if isSearching {
+            if let new = searchNews?[index] {
+                return new
+            }
+        } else {
+            if let new = breakingNews?[index] {
+                return new
+            }
         }
         return nil
     }
     
     func numberOfItems() -> Int {
-        breakingNews?.count ?? 0
+        return (isSearching ? searchNews?.count : breakingNews?.count)  ?? .zero
     }
 }

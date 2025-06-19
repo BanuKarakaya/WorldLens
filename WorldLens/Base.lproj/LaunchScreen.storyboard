@@ -23,21 +23,21 @@
                                     <constraint firstAttribute="height" constant="150" id="wrj-h6-9d6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="WorldLens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NZ-fY-sfR">
-                                <rect key="frame" x="149" y="520" width="94" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORLDLENS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NZ-fY-sfR">
+                                <rect key="frame" x="135" y="509" width="123" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="P2M-7f-Don"/>
-                                    <constraint firstAttribute="width" constant="94" id="dVx-cH-2aS"/>
+                                    <constraint firstAttribute="width" constant="123" id="3o0-3Y-3FJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.76470588240000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.21166261227544911" green="0.52654608058383234" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9NZ-fY-sfR" firstAttribute="top" secondItem="Rha-JJ-KWM" secondAttribute="bottom" constant="19" id="RMm-kq-FWQ"/>
+                            <constraint firstItem="9NZ-fY-sfR" firstAttribute="top" secondItem="Rha-JJ-KWM" secondAttribute="bottom" constant="8" id="QE4-cB-hLh"/>
+                            <constraint firstItem="9NZ-fY-sfR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rtu-T4-WLc"/>
                             <constraint firstItem="Rha-JJ-KWM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WRT-06-DML"/>
                             <constraint firstItem="Rha-JJ-KWM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bjN-wB-ZRZ"/>
                         </constraints>

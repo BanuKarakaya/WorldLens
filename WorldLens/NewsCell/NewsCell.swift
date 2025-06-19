@@ -35,7 +35,7 @@ extension NewsCell: NewsCellViewModelDelegate {
         newsTitle.text = new?.title
         newsContent.text = new?.description
         newsDate.text = new?.publishedAt
-        newsSource.text = new?.source.id
+        newsSource.text = new?.source.name
         prepareBannerImage(with: new?.urlToImage)
     }
     
