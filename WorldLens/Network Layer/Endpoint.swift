@@ -32,7 +32,7 @@ extension Endpoint: EndpointProtocol {
     var path: String {
         switch self {
         case .articles(let query):
-            return "everything?q=trump\(query)"
+            return "everything?q=keyword\(query)"
         case .breakingNews(let query):
             return "top-headlines?country=us\(query)"
         case .searchArticles(let searchText):
