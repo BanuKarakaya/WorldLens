@@ -11,9 +11,10 @@ protocol SearchViewModelProtocol {
     func numberOfItems() -> Int
     func numberOfItemsForCategories() -> Int
     func newAtIndex(index: Int) -> Article?
-    func categoryAtIndex(index: Int) -> String?
+    func categoryAt(index: Int) -> Categories?
     func viewDidLoad()
     func didSelectItemAt(index: Int)
+    func didSelectItemAtForCategories(index: Int)
     func searchBarCancelButtonClicked()
     func searchBarSearchButtonClicked(searchText: String?)
 }
@@ -29,9 +30,10 @@ protocol SearchViewModelDelegate: AnyObject {
 final class SearchViewModel {
     private weak var delegate: SearchViewModelDelegate?
     var breakingNews: [Article]?
+    var categoriesArticles: [Article]?
     var searchNews: [Article]?
     var isSearching = false
-    var categories = ["Breaking News", "Entertainment", "Health", "Science", "Sports"]
+    private var categories: [Categories] = []
     private let networkManager: NetworkManagerInterface
     
     init(delegate: SearchViewModelDelegate?, networkManager: NetworkManagerInterface = NetworkManager.shared) {
@@ -72,9 +74,42 @@ final class SearchViewModel {
             }
         }, searchText: searchedText)
     }
+    
+    func fetchCategoriesArticles(categoriesWord: String) {
+        networkManager.getCategoriesArticles(completion: { responseData in
+            switch responseData {
+            case .success(let responseData):
+                self.categoriesArticles = responseData.articles
+                DispatchQueue.main.async {
+                    self.delegate?.reloadData()
+                }
+                print(responseData)
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }, categoriesWord: categoriesWord)
+    }
+}
+
+struct Categories {
+    let name: String
+    var isSelected: Bool
 }
 
 extension SearchViewModel: SearchViewModelProtocol {
+    func didSelectItemAtForCategories(index: Int) {
+        var selectedType: String
+        
+        selectedType = categories[index].name
+        for i in 0 ..< categories.count {
+            categories[i].isSelected = false
+        }
+        categories[index].isSelected = true
+        fetchCategoriesArticles(categoriesWord: selectedType)
+    }
+    
     func searchBarSearchButtonClicked(searchText: String?) {
         if let searchText = searchText {
             isSearching = true
@@ -91,13 +126,12 @@ extension SearchViewModel: SearchViewModelProtocol {
     func didSelectItemAt(index: Int) {
         var selectedCell: Article?
         
-        selectedCell = breakingNews?[index]
+        selectedCell = categoriesArticles?[index]
         delegate?.navigateToDetailVC(selectedCell: selectedCell)
     }
     
-    func categoryAtIndex(index: Int) -> String? {
-        let category = categories[index]
-        return category
+    func categoryAt(index: Int) -> Categories? {
+        categories[index]
     }
     
     func numberOfItemsForCategories() -> Int {
@@ -105,10 +139,16 @@ extension SearchViewModel: SearchViewModelProtocol {
     }
     
     func viewDidLoad() {
+        categories = [
+            Categories.init(name: "Entertainment", isSelected: true),
+            Categories.init(name: "Health", isSelected: false),
+            Categories.init(name: "Science", isSelected: false),
+            Categories.init(name: "Sports", isSelected: false)
+        ]
         delegate?.prepareCollectionView()
         delegate?.prepareUI()
         delegate?.prepareSearchController()
-        fetchBreakingNews()
+        fetchCategoriesArticles(categoriesWord: "Entertainment")
     }
     
     func newAtIndex(index: Int) -> Article? {
@@ -117,7 +157,7 @@ extension SearchViewModel: SearchViewModelProtocol {
                 return new
             }
         } else {
-            if let new = breakingNews?[index] {
+            if let new = categoriesArticles?[index] {
                 return new
             }
         }
@@ -125,6 +165,6 @@ extension SearchViewModel: SearchViewModelProtocol {
     }
     
     func numberOfItems() -> Int {
-        return (isSearching ? searchNews?.count : breakingNews?.count)  ?? .zero
+        return (isSearching ? searchNews?.count : categoriesArticles?.count)  ?? .zero
     }
 }

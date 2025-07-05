@@ -25,7 +25,7 @@ extension SearchViewController: UICollectionViewDelegate {
         if collectionView == searchCollectionView {
             viewModel.didSelectItemAt(index: indexPath.item)
         } else if collectionView == categoriesCollectionView {
-            print("banu")
+            viewModel.didSelectItemAtForCategories(index: indexPath.item)
         }
     }
 }
@@ -50,8 +50,8 @@ extension SearchViewController: UICollectionViewDataSource {
             return cell
         } else if collectionView == categoriesCollectionView {
             let cell = collectionView.dequeCell(cellType: CategoriesCell.self, indexPath: indexPath)
-            let category = viewModel.categoryAtIndex(index: indexPath.item)
-            let cellViewModel = CategoriesCellViewModel(delegate: cell, category: category)
+            let category = viewModel.categoryAt(index: indexPath.item)
+            let cellViewModel = CategoriesCellViewModel(delegate: cell, categoryText: category?.name, isSelected: category!.isSelected)
             cell.viewModel = cellViewModel
             
             return cell
@@ -63,13 +63,24 @@ extension SearchViewController: UICollectionViewDataSource {
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if collectionView == categoriesCollectionView {
-            return UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+            return UIEdgeInsets(top: 0, left: 11, bottom: 0, right: 11)
         } else if collectionView == searchCollectionView {
             return UIEdgeInsets(top: 0, left: 8, bottom: 12, right: 8)
         } else {
             return UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 0)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == searchCollectionView {
+            return CGSize(width: (searchCollectionView.frame.width - 33)/2, height: 210)
+        } else if collectionView == categoriesCollectionView {
+            return CGSize(width: 120, height: 33)
+        } else {
+            return CGSize(width: 120, height: 33)
+        }
+    }
+    
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -119,5 +130,6 @@ extension SearchViewController: SearchViewModelDelegate {
     
     func reloadData() {
         searchCollectionView.reloadData()
+        categoriesCollectionView.reloadData()
     }
 }

@@ -40,6 +40,12 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: newsCollectionView.frame.width - 32, height: 305)
+    }
+}
+
 extension HomeViewController: HomeViewModelDelegate {
     func navigateToDetailVC(selectedCell: Article?) {
         let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NewDetailPageViewController") as! NewDetailPageViewController

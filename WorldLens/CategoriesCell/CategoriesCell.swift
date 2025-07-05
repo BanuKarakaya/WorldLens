@@ -10,6 +10,8 @@ import UIKit
 class CategoriesCell: UICollectionViewCell {
 
     @IBOutlet weak var categoriesLabel: UILabel!
+    @IBOutlet weak var view: UIView!
+    
     
     var viewModel: CategoriesCellViewModelProtocol! {
         didSet {
@@ -20,13 +22,27 @@ class CategoriesCell: UICollectionViewCell {
 }
 
 extension CategoriesCell: CategoriesCellViewModelDelegate {
+    func prepareUIForSelectedState() {
+        categoriesLabel.textColor = .white
+        view.backgroundColor = .tintColor
+        self.layer.cornerRadius = 10
+    }
+    
+    func prepareUIForUnSelectedState() {
+        self.layer.cornerRadius = 10
+        categoriesLabel.textColor = .black
+        view.backgroundColor = .white
+        self.layer.borderWidth = 0.6
+        self.layer.borderColor = tintColor.cgColor
+    }
+    
     func prepareUI() {
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 0.6
         self.layer.borderColor = tintColor.cgColor
     }
     
-    func configureCell(category: String?) {
-        categoriesLabel.text = category
+    func configureCell(categoryText: String?) {
+        categoriesLabel.text = categoryText
     }
 }

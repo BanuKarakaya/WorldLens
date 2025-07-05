@@ -14,16 +14,22 @@ protocol CategoriesCellViewModelProtocol {
 
 protocol CategoriesCellViewModelDelegate: AnyObject {
     func prepareUI()
-    func configureCell(category: String?)
+    func configureCell(categoryText: String?)
+    func prepareUIForSelectedState()
+    func prepareUIForUnSelectedState()
 }
 
 final class CategoriesCellViewModel {
     private weak var delegate: CategoriesCellViewModelDelegate?
-    private var category: String?
+    private var categoryText: String?
+    private var isSelected: Bool
     
-    init(delegate: CategoriesCellViewModelDelegate?, category: String?) {
+    init(delegate: CategoriesCellViewModelDelegate?,
+         categoryText: String?,
+         isSelected: Bool) {
         self.delegate = delegate
-        self.category = category
+        self.categoryText = categoryText
+        self.isSelected = isSelected
     }
 }
 
@@ -33,8 +39,14 @@ extension CategoriesCellViewModel: CategoriesCellViewModelProtocol {
     }
     
     func load() {
-        if let category = category {
-            delegate?.configureCell(category: category)
+        if let text = categoryText {
+            delegate?.configureCell(categoryText: text)
+        }
+        
+        if isSelected {
+            delegate?.prepareUIForSelectedState()
+        } else {
+            delegate?.prepareUIForUnSelectedState()
         }
     }
 }
