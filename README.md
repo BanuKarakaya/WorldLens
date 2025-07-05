@@ -25,9 +25,11 @@
 
 ## 📸 Screenshots 
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/.../worllens1.png" width="200"/>
-  <img src="https://user-images.githubusercontent.com/.../worllens2.png" width="200"/>
+  <img src="https://github.com/user-attachments/assets/209f2cb2-55ab-4e0c-930b-c2a1612c018d" alt="Screenshot 1" width="200" />
+  <img src="https://github.com/user-attachments/assets/81f6d3ea-0cf8-4148-b215-4aed8e3f1580" alt="Screenshot 2" width="200" />
 </p>
+
+
 
 ## 🧪 Project Status
 This project is represents a comprehensive learning experience by combining advanced iOS development techniques with real-world implementation.
